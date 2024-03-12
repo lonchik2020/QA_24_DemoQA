@@ -55,7 +55,7 @@ public class CssLocators {
         System.out.println("----> " + elementSpan.getText());
 
 
-        driver.quit();
+        //driver.quit();
     }
 
 
