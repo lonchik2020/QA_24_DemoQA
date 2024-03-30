@@ -10,6 +10,7 @@ public class TestBase implements AppManager {
     @BeforeSuite
     public void setup(){
         init();
+        //initAddOptions();
     }
 
     @AfterSuite

@@ -25,6 +25,11 @@ public class StudentFormTests extends TestBase implements HelperStudent {
                 .gender("Female")
                 .mobile("1234567890")
                 .dateOfBirth("22 Aug 2007")
+                .subjects("Maths,Physics,Arts")
+                .hobbies("Reading,Sports")
+                .address("Street 1, app.2")
+                .state("NCR")
+                .city("Delhi")
                 .build();
         fillStudentForm(student);
 
