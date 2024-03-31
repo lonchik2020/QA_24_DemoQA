@@ -27,6 +27,12 @@ public interface HelperStudent extends HelperBase{
     By btnForms = By.xpath("//div[@class='category-cards']/div[2]");
     By btnPracticeForm = By.xpath("//span[text()='Practice Form']");
 
+    By btnSubmit = By.id("submit");
+
+    By titleSubmitForm = By.id("example-modal-sizes-title-lg");
+
+    By btnClose = By.id("closeLargeModal");
+
 
     default void selectPracticeForm(){
         clickBase(btnForms);
@@ -48,8 +54,14 @@ public interface HelperStudent extends HelperBase{
         typeCity(student.getCity());
     }
 
+
+    default void clickBtnSubmit(){
+        clickBase(btnSubmit);
+    }
+
     default void typeCity(String city){
         WebElement element = driver.findElement(fieldCity);
+        //element.click();
         element.sendKeys(city);
         element.sendKeys(Keys.ENTER);
     }
@@ -117,6 +129,13 @@ public interface HelperStudent extends HelperBase{
         }else{
             clickBase(By.xpath("//label[@for='gender-radio-3']"));
         }
+    }
 
+    default boolean isElementPresent_titleSubmitForm(){
+        return isElementPresent(titleSubmitForm);
+    }
+
+    default void clickBtnClose(){
+        clickBase(btnClose);
     }
 }
